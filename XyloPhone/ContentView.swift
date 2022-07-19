@@ -9,8 +9,48 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Button("C") {
+                playSound("C")
+            }
+            .buttonStyle(KeyButton(key: "C"))
+            
+            Button("D") {
+                playSound("D")
+            }
+            .buttonStyle(KeyButton(key: "D"))
+            
+            Button("E") {
+                playSound("E")
+            }
+            .buttonStyle(KeyButton(key: "E"))
+            
+            Button("F") {
+                playSound("F")
+            }
+            .buttonStyle(KeyButton(key: "F"))
+            
+            Button("G") {
+                playSound("G")
+            }
+            .buttonStyle(KeyButton(key: "G"))
+            
+            Button("A") {
+                playSound("A")
+            }
+            .buttonStyle(KeyButton(key: "A"))
+            
+            Button("B") {
+                playSound("B")
+            }
+            .buttonStyle(KeyButton(key: "B"))
+            
+        }
+        .padding()
+    }
+    
+    private func playSound(_ keyName: String) {
+        print("I'm not playing \(keyName) yet")
     }
 }
 
