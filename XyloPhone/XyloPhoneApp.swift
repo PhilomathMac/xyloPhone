@@ -12,6 +12,7 @@ struct XyloPhoneApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(Player())
         }
     }
 }

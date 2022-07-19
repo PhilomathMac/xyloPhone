@@ -19,6 +19,7 @@
 		BB03DE3C288743F300384911 /* G.wav in Resources */ = {isa = PBXBuildFile; fileRef = BB03DE35288743F300384911 /* G.wav */; };
 		BB03DE3D288743F300384911 /* E.wav in Resources */ = {isa = PBXBuildFile; fileRef = BB03DE36288743F300384911 /* E.wav */; };
 		BB03DE3E288743F300384911 /* D.wav in Resources */ = {isa = PBXBuildFile; fileRef = BB03DE37288743F300384911 /* D.wav */; };
+		BB03DE402887495400384911 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB03DE3F2887495400384911 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		BB03DE35288743F300384911 /* G.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = G.wav; sourceTree = "<group>"; };
 		BB03DE36288743F300384911 /* E.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = E.wav; sourceTree = "<group>"; };
 		BB03DE37288743F300384911 /* D.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = D.wav; sourceTree = "<group>"; };
+		BB03DE3F2887495400384911 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			children = (
 				BB03DE202887401F00384911 /* XyloPhoneApp.swift */,
 				BB03DE222887401F00384911 /* ContentView.swift */,
+				BB03DE3F2887495400384911 /* Player.swift */,
 				BB03DE242887402000384911 /* Assets.xcassets */,
 				BB03DE262887402000384911 /* Preview Content */,
 				BB03DE2E2887417500384911 /* KeyButton.swift */,
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB03DE402887495400384911 /* Player.swift in Sources */,
 				BB03DE2F2887417500384911 /* KeyButton.swift in Sources */,
 				BB03DE232887401F00384911 /* ContentView.swift in Sources */,
 				BB03DE212887401F00384911 /* XyloPhoneApp.swift in Sources */,

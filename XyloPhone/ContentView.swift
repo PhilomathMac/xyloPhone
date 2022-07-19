@@ -10,7 +10,7 @@ import AVFoundation
 
 struct ContentView: View {
     
-    var player: AVAudioPlayer?
+    @EnvironmentObject private var player: Player
     
     var body: some View {
         GeometryReader { geo in
@@ -18,7 +18,7 @@ struct ContentView: View {
             VStack {
                 
                 Button {
-                    playSound("C")
+                    player.playSound("C")
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
@@ -34,7 +34,7 @@ struct ContentView: View {
                 }
                 
                 Button {
-                    playSound("D")
+                    player.playSound("D")
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
@@ -51,7 +51,7 @@ struct ContentView: View {
                 }
                 
                 Button {
-                    playSound("E")
+                    player.playSound("E")
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
@@ -68,7 +68,7 @@ struct ContentView: View {
                 }
                 
                 Button {
-                    playSound("F")
+                    player.playSound("F")
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
@@ -85,7 +85,7 @@ struct ContentView: View {
                 }
                 
                 Button {
-                    playSound("G")
+                    player.playSound("G")
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
@@ -102,7 +102,7 @@ struct ContentView: View {
                 }
                 
                 Button {
-                    playSound("A")
+                    player.playSound("A")
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
@@ -119,7 +119,7 @@ struct ContentView: View {
                 }
                 
                 Button {
-                    playSound("B")
+                    player.playSound("B")
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
@@ -137,31 +137,6 @@ struct ContentView: View {
             }
         }
         .padding()
-    }
-    
-    /// Creates AVAudioSession (to play sound even when silent), sets up player with passed in soundName, and plays the sound
-    func playSound(_ soundName: String) {
-        
-        guard let url = Bundle.main.url(forResource: soundName, withExtension: "wav") else { return }
-        
-        do {
-            // .playback category allows the audio to play even if the device is in silent mode
-            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
-            
-            // Activates the audioSession
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-            // Makes an audio player that plays a specific file
-            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-            
-            guard let player = player else { return }
-            
-            //             Plays the audio
-            player.play()
-            
-        } catch {
-            print(error.localizedDescription)
-        }
     }
 }
 
