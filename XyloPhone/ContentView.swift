@@ -13,42 +13,128 @@ struct ContentView: View {
     var player: AVAudioPlayer?
     
     var body: some View {
-        VStack {
-            Button("C") {
-                playSound("C")
-            }
-            .buttonStyle(KeyButton(key: "C"))
+        GeometryReader { geo in
             
-            Button("D") {
-                playSound("D")
+            VStack {
+                
+                Button {
+                    playSound("C")
+                } label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(LinearGradient(
+                                colors: [.red, .orange],
+                                startPoint: UnitPoint(x: 0.0, y: 0.0),
+                                endPoint: UnitPoint(x: 1.0, y: 1.0)))
+                            .frame(width: geo.size.width)
+                        Text("C")
+                            .font(.largeTitle)
+                            .foregroundColor(.white)
+                    }
+                }
+                
+                Button {
+                    playSound("D")
+                } label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(LinearGradient(
+                                colors: [.orange, .yellow],
+                                startPoint: UnitPoint(x: 0.0, y: 0.0),
+                                endPoint: UnitPoint(x: 1.0, y: 1.0)))
+                            .frame(width: geo.size.width - 20)
+                        Text("D")
+                            .font(.largeTitle)
+                            .foregroundColor(.white)
+                    }
+                    .shadow(radius: 10)
+                }
+                
+                Button {
+                    playSound("E")
+                } label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(LinearGradient(
+                                colors: [.yellow, .green],
+                                startPoint: UnitPoint(x: 0.0, y: 0.0),
+                                endPoint: UnitPoint(x: 1.0, y: 1.0)))
+                            .frame(width: geo.size.width - 40)
+                        Text("E")
+                            .font(.largeTitle)
+                            .foregroundColor(.white)
+                    }
+                    .shadow(radius: 10)
+                }
+                
+                Button {
+                    playSound("F")
+                } label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(LinearGradient(
+                                colors: [.green, .cyan],
+                                startPoint: UnitPoint(x: 0.0, y: 0.0),
+                                endPoint: UnitPoint(x: 1.0, y: 1.0)))
+                            .frame(width: geo.size.width - 60)
+                        Text("F")
+                            .font(.largeTitle)
+                            .foregroundColor(.white)
+                    }
+                    .shadow(radius: 10)
+                }
+                
+                Button {
+                    playSound("G")
+                } label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(LinearGradient(
+                                colors: [.cyan, .blue],
+                                startPoint: UnitPoint(x: 0.0, y: 0.0),
+                                endPoint: UnitPoint(x: 1.0, y: 1.0)))
+                            .frame(width: geo.size.width - 80)
+                        Text("G")
+                            .font(.largeTitle)
+                            .foregroundColor(.white)
+                    }
+                    .shadow(radius: 10)
+                }
+                
+                Button {
+                    playSound("A")
+                } label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(LinearGradient(
+                                colors: [.blue, .purple],
+                                startPoint: UnitPoint(x: 0.0, y: 0.0),
+                                endPoint: UnitPoint(x: 1.0, y: 1.0)))
+                            .frame(width: geo.size.width - 100)
+                        Text("A")
+                            .font(.largeTitle)
+                            .foregroundColor(.white)
+                    }
+                    .shadow(radius: 10)
+                }
+                
+                Button {
+                    playSound("B")
+                } label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(LinearGradient(
+                                colors: [.purple, .pink],
+                                startPoint: UnitPoint(x: 0.0, y: 0.0),
+                                endPoint: UnitPoint(x: 1.0, y: 1.0)))
+                            .frame(width: geo.size.width - 110)
+                        Text("B")
+                            .font(.largeTitle)
+                            .foregroundColor(.white)
+                    }
+                    .shadow(radius: 10)
+                }
             }
-            .buttonStyle(KeyButton(key: "D"))
-            
-            Button("E") {
-                playSound("E")
-            }
-            .buttonStyle(KeyButton(key: "E"))
-            
-            Button("F") {
-                playSound("F")
-            }
-            .buttonStyle(KeyButton(key: "F"))
-            
-            Button("G") {
-                playSound("G")
-            }
-            .buttonStyle(KeyButton(key: "G"))
-            
-            Button("A") {
-                playSound("A")
-            }
-            .buttonStyle(KeyButton(key: "A"))
-            
-            Button("B") {
-                playSound("B")
-            }
-            .buttonStyle(KeyButton(key: "B"))
-            
         }
         .padding()
     }
@@ -70,7 +156,7 @@ struct ContentView: View {
             
             guard let player = player else { return }
             
-            // Plays the audio
+            //             Plays the audio
             player.play()
             
         } catch {
