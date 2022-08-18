@@ -1,7 +1,7 @@
 # xyloPhone
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/93546810/183769546-e5524552-3626-4601-9cc6-b2054a8b9a2c.png" alt="xylophone screenshot" width="200"/>
+  <img src="https://github.com/PhilomathMac/xyloPhone/blob/main/PortfolioImage.png?raw=true" alt="xylophone screenshot" width="200"/>
 </p>
 
 ## Description
